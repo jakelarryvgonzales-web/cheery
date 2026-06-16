@@ -348,7 +348,7 @@ button:focus-visible {
 }
 
 /* ── Folder cards: clickable ── */
-.folder-card[data-target] {
+.folder-card[data-target] { 
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -433,7 +433,7 @@ button:focus-visible {
     height: 100%;
     border-radius: var(--radius);
     overflow: hidden;
-    border: 2px solid #333;
+    border: 2px ;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -446,7 +446,7 @@ button:focus-visible {
 .exp-card-header {
     background-color: var(--peach);
     padding: 16px 18px;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #33333362;
 }
 
 .exp-card-header h3 {
