@@ -46,9 +46,9 @@
         <section id="about" class="section-about">
             <div class="section-inner">
                 <h2 class="section-title">About me</h2>
-                <div class="about-layout">
+                <div class="about-layout" id="about-layout">
                     <div class="img-box">
-                        <img src="assets/ID_CARD.png" class="ID" alt="Cheery Cajegas ID badge" width="280" height="auto">
+                        <img src="assets/ID_CARD.jfif" class="ID" alt="Cheery Cajegas ID badge" width="280" height="auto">
                     </div>
                     <div class="about-content">
                         <div class="introduction">
@@ -58,150 +58,153 @@
                             <p class="bio">I help organizations improve efficiency through structured systems, clear communication, and operational coordination.</p>
                         </div>
 
-                        <h3 class="areaOfExpertise">AREA OF EXPERTISE:</h3>
-                        <div class="box-folder">
-                            <div class="folder-card">
-                                <div class="folder-tab"></div>
-                                <div class="folder-body">
-                                    <h4>Operations</h4>
-                                    <ul>
-                                        <li>Process improvement</li>
-                                        <li>SOP implementation</li>
-                                        <li>Branch coordination</li>
-                                        <li>Reporting</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="folder-card">
-                                <div class="folder-tab"></div>
-                                <div class="folder-body">
-                                    <h4>Executive Support</h4>
-                                    <ul>
-                                        <li>Calendar management</li>
-                                        <li>Meeting coordination</li>
-                                        <li>Internal communications</li>
-                                        <li>Executive reporting support</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="folder-card">
-                                <div class="folder-tab"></div>
-                                <div class="folder-body">
-                                    <h4>Marketing Operations</h4>
-                                    <ul>
-                                        <li>CRM campaigns</li>
-                                        <li>Brand governance</li>
-                                        <li>Google Business management</li>
-                                        <li>Marketing coordination</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="folder-card">
-                                <div class="folder-tab"></div>
-                                <div class="folder-body">
-                                    <h4>Employee Support</h4>
-                                    <ul>
-                                        <li>Onboarding &amp; Offboarding</li>
-                                        <li>Compliance tracking</li>
-                                        <li>Communication standards</li>
-                                        <li>Training</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="about-expertise">
+  <h3 class="areaOfExpertise">AREA OF EXPERTISE:</h3>
+  <div class="box-folder">
+
+    <div class="folder-card" data-target="exp-operations" role="button" tabindex="0">
+      <div class="folder-tab"></div>
+      <div class="folder-body">
+        <h4>Operations</h4>
+        <ul>
+          <li>Process improvement</li>
+          <li>SOP implementation</li>
+          <li>Branch coordination</li>
+          <li>Reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="folder-card" data-target="exp-executive" role="button" tabindex="0">
+      <div class="folder-tab"></div>
+      <div class="folder-body">
+        <h4>Executive Support</h4>
+        <ul>
+          <li>Calendar management</li>
+          <li>Meeting coordination</li>
+          <li>Internal communications</li>
+          <li>Executive reporting support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="folder-card" data-target="exp-marketing" role="button" tabindex="0">
+      <div class="folder-tab"></div>
+      <div class="folder-body">
+        <h4>Marketing Operations</h4>
+        <ul>
+          <li>CRM campaigns</li>
+          <li>Brand governance</li>
+          <li>Google Business management</li>
+          <li>Marketing coordination</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="folder-card" data-target="exp-employee" role="button" tabindex="0">
+      <div class="folder-tab"></div>
+      <div class="folder-body">
+        <h4>Employee Support</h4>
+        <ul>
+          <li>Onboarding &amp; Offboarding</li>
+          <li>Compliance tracking</li>
+          <li>Communication standards</li>
+          <li>Training</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experiences -->
-        <section id="experiences" class="section-experiences">
-            <div class="section-inner">
-                <h2 class="section-title">EXPERIENCES</h2>
-                <div class="experience-grid">
+<section id="experiences" class="section-experiences">
+  <div class="section-inner">
+    <h2 class="section-title">EXPERIENCES</h2>
+    <div class="experience-grid">
 
-                    <article class="exp-card">
-                        <div class="exp-card-header">
-                            <h3>OPERATIONS &amp; BUSINESS SUPPORT</h3>
-                        </div>
-                        <div class="exp-card-body">
-                            <p class="label">CHALLENGE</p>
-                            <p>Supporting daily operations across multiple branches while maintaining administrative controls.</p>
-                            <p class="label">WHAT I DID</p>
-                            <ul>
-                                <li>Coordinated operations across 35+ branches</li>
-                                <li>Managed vendors and maintenance requests</li>
-                                <li>Supported process standardization (introduced digital checklists, document tracker, and admin dashboard)</li>
-                                <li>Maintained office inventory and supplies and prepare petty cash reports</li>
-                            </ul>
-                            <p class="label">OUTCOME</p>
-                            <p>Improved operational visibility, continuity, and administrative efficiency.</p>
-                        </div>
-                    </article>
+      <!-- 1: matches Operations folder -->
+      <article class="exp-card" id="exp-operations">
+        <div class="exp-card-header"><h3>OPERATIONS &amp; BUSINESS SUPPORT</h3></div>
+        <div class="exp-card-body">
+          <p class="label">CHALLENGE</p>
+          <p>Supporting daily operations across multiple branches while maintaining administrative controls.</p>
+          <p class="label">WHAT I DID</p>
+          <ul>
+            <li>Coordinated operations across 35+ branches</li>
+            <li>Managed vendors and maintenance requests</li>
+            <li>Supported process standardization (introduced digital checklists, document tracker, and admin dashboard)</li>
+            <li>Maintained office inventory and supplies and prepare petty cash reports</li>
+          </ul>
+          <p class="label">OUTCOME</p>
+          <p>Improved operational visibility, continuity, and administrative efficiency.</p>
+        </div>
+      </article>
 
-                    <article class="exp-card">
-                        <div class="exp-card-header">
-                            <h3>MARKETING OPERATIONS &amp; DIGITAL PRESENCE</h3>
-                        </div>
-                        <div class="exp-card-body">
-                            <p class="label">CHALLENGE</p>
-                            <p>Maintaining consistent brand communications across multiple channels and locations and coordinating with third party team.</p>
-                            <p class="label">WHAT I DID</p>
-                            <ul>
-                                <li>Built standard company Brand Guidelines</li>
-                                <li>Coordinated marketing activities, reviewed publication materials</li>
-                                <li>Managed Zoho CRM campaigns for WhatsApp marketing</li>
-                                <li>Managed 35+ Google Business locations</li>
-                                <li>Managed all official accounts and participates on campaigns and reels</li>
-                            </ul>
-                            <p class="label">OUTCOME</p>
-                            <p>Improved brand consistency, customer engagement, and digital visibility.</p>
-                        </div>
-                    </article>
+      <!-- 2: matches Executive Support folder -->
+      <article class="exp-card" id="exp-executive">
+        <div class="exp-card-header"><h3>EXECUTIVE SUPPORT &amp; PEOPLE OPERATIONS</h3></div>
+        <div class="exp-card-body">
+          <p class="label">CHALLENGE</p>
+          <p>Ensuring effective communication between leadership and employees.</p>
+          <p class="label">WHAT I DID</p>
+          <ul>
+            <li>Supported CEO, COO, Operations Manager, HR &amp; Chairman</li>
+            <li>Managed executive calendars, coordinated meetings &amp; follow-ups</li>
+            <li>Built mail merge workflows for 150+ employees</li>
+            <li>Trained staffs on regular basis upon management requests</li>
+            <li>Supported onboarding &amp; offboarding and other compliance activities</li>
+          </ul>
+          <p class="label">OUTCOME</p>
+          <p>Improved communication, employee management, and organizational coordination.</p>
+        </div>
+      </article>
 
-                    <article class="exp-card">
-                        <div class="exp-card-header">
-                            <h3>EXECUTIVE SUPPORT &amp; PEOPLE OPERATIONS</h3>
-                        </div>
-                        <div class="exp-card-body">
-                            <p class="label">CHALLENGE</p>
-                            <p>Ensuring effective communication between leadership and employees.</p>
-                            <p class="label">WHAT I DID</p>
-                            <ul>
-                                <li>Supported CEO, COO, Operations Manager, HR &amp; Chairman</li>
-                                <li>Managed executive calendars, coordinated meetings &amp; follow-ups</li>
-                                <li>Built mail merge workflows for 150+ employees</li>
-                                <li>Trained staffs on regular basis upon management requests</li>
-                                <li>Supported onboarding &amp; offboarding and other compliance activities</li>
-                            </ul>
-                            <p class="label">OUTCOME</p>
-                            <p>Improved communication, employee management, and organizational coordination.</p>
-                        </div>
-                    </article>
+      <!-- 3: matches Marketing Operations folder -->
+      <article class="exp-card" id="exp-marketing">
+        <div class="exp-card-header"><h3>MARKETING OPERATIONS &amp; DIGITAL PRESENCE</h3></div>
+        <div class="exp-card-body">
+          <p class="label">CHALLENGE</p>
+          <p>Maintaining consistent brand communications across multiple channels and locations and coordinating with third party team.</p>
+          <p class="label">WHAT I DID</p>
+          <ul>
+            <li>Built standard company Brand Guidelines</li>
+            <li>Coordinated marketing activities, reviewed publication materials</li>
+            <li>Managed Zoho CRM campaigns for WhatsApp marketing</li>
+            <li>Managed 35+ Google Business locations</li>
+            <li>Managed all official accounts and participates on campaigns and reels</li>
+          </ul>
+          <p class="label">OUTCOME</p>
+          <p>Improved brand consistency, customer engagement, and digital visibility.</p>
+        </div>
+      </article>
 
-                    <article class="exp-card">
-                        <div class="exp-card-header">
-                            <h3>SALES &amp; CUSTOMER EXPERIENCE</h3>
-                        </div>
-                        <div class="exp-card-body">
-                            <p class="label">CHALLENGE</p>
-                            <p>Supporting customer acquisition and retention activities.</p>
-                            <p class="label">WHAT I DID</p>
-                            <ul>
-                                <li>Managed property listings on Bayut, Dubizzle, and Property Finder</li>
-                                <li>Established a tracker for marketing lead reports on all platforms</li>
-                                <li>Supported sales transactions and tracked tenant payments</li>
-                                <li>Handled customer complaints and issue resolution</li>
-                                <li>Maintained sales and operational reports</li>
-                            </ul>
-                            <p class="label">OUTCOME</p>
-                            <p>Contributed to AED 100K+ monthly sales while supporting customer satisfaction and operational accuracy.</p>
-                        </div>
-                    </article>
+      <!-- 4: matches Employee Support folder -->
+      <article class="exp-card" id="exp-employee">
+        <div class="exp-card-header"><h3>SALES &amp; CUSTOMER EXPERIENCE</h3></div>
+        <div class="exp-card-body">
+          <p class="label">CHALLENGE</p>
+          <p>Supporting customer acquisition and retention activities.</p>
+          <p class="label">WHAT I DID</p>
+          <ul>
+            <li>Managed property listings on Bayut, Dubizzle, and Property Finder</li>
+            <li>Established a tracker for marketing lead reports on all platforms</li>
+            <li>Supported sales transactions and tracked tenant payments</li>
+            <li>Handled customer complaints and issue resolution</li>
+            <li>Maintained sales and operational reports</li>
+          </ul>
+          <p class="label">OUTCOME</p>
+          <p>Contributed to AED 100K+ monthly sales while supporting customer satisfaction and operational accuracy.</p>
+        </div>
+      </article>
 
-                </div>
-            </div>
-        </section>
+    </div>
+  </div>
+</section>
 
         <!-- Why You Need Me -->
         <section id="why" class="section-why">
@@ -209,28 +212,34 @@
                 <h2 class="section-title">Why You Need Me</h2>
 
                 <div class="why-block">
-                    <p class="why-intro">
-                        <span class="bullet-grey" aria-hidden="true">●</span>
+                    
+                    <H3 class="why-intro">
+                        <span class="bullet-grey" aria-hidden="true">⚠️</span>
                         <strong>Most operational challenges are not caused by difficult work, they are caused by:</strong>
-                    </p>
+                    </H3>
+                   
                     <div class="cause">
+                      
                         <div>Poor communication</div>
                         <div>Manual follow-ups</div>
                         <div>Lack of visibility</div>
                         <div>Inconsistent process</div>
+                        
                     </div>
                 </div>
 
                 <div class="why-block">
-                    <p class="why-intro">
-                        <span class="bullet-green" aria-hidden="true">▲</span>
+                    <H3 class="why-intro">
+                        <span class="bullet-green" aria-hidden="true">✅</span>
                         <strong>My focus is on building systems that improve:</strong>
-                    </p>
+                    </H3>
                     <div class="improve">
+                        
                         <div>Accountability</div>
                         <div>Documentation</div>
                         <div>Communication</div>
                         <div>Operational Efficiency</div>
+                       
                     </div>
                 </div>
             </div>
@@ -251,25 +260,33 @@
                             <div class="greenCircle"></div>
                         </div>
 
-                        <div class="cert-row">
-                            <div class="folder-stack">
-                                <img src="assets/macbook folder.jfif" class="layer-back" alt="" loading="lazy">
-                                <img src="assets/CHEERY 1.png" class="layer-cert" alt="Digital Marketing certificate preview" loading="lazy">
-                                <img src="assets/macbook front folder.png" class="layer-front" alt="" loading="lazy">
-                                <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="folder-clickme">CLICK ME!</a>
-                                <span class="cert-label">Foundations of Digital Marketing and E-commerce</span>
+                        <div class="cert-carousel">
+                            <button type="button" class="cert-arrow cert-arrow-prev" aria-label="Previous certificate" hidden>&#8249;</button>
+
+                            <div class="cert-row">
+                                <div class="cert-folder is-active" data-label="Foundations of Digital Marketing and E-commerce">
+                                    <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="cert-folder-link">
+                                        <img src="assets/macbook folder.jfif" alt="Digital Marketing certificate folder" loading="lazy">
+                                        <span class="folder-clickme">CLICK ME!</span>
+                                    </a>
+                                    <p class="cert-label">Foundations of Digital Marketing and E-commerce</p>
+                                </div>
+
+                                <div class="cert-folder" data-label="Foundations of Project Management">
+                                    <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="cert-folder-link">
+                                        <img src="assets/macbook folder.jfif" alt="Project Management certificate folder" loading="lazy">
+                                        <span class="folder-clickme">CLICK ME!</span>
+                                    </a>
+                                    <p class="cert-label">Foundations of Project Management</p>
+                                </div>
                             </div>
 
-                            <div class="folder-stack">
-                                <img src="assets/macbook folder.jfif" class="layer-back" alt="" loading="lazy">
-                                <img src="assets/cheery 2.png" class="layer-cert" alt="Project Management certificate preview" loading="lazy">
-                                <img src="assets/macbook front folder.png" class="layer-front" alt="" loading="lazy">
-                                <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="folder-clickme">CLICK ME!</a>
-                                <span class="cert-label">Foundations of Project Management</span>
-                            </div>
+                            <button type="button" class="cert-arrow cert-arrow-next" aria-label="Next certificate" hidden>&#8250;</button>
                         </div>
                     </div>
                 </div>
+
+                <p class="cert-mobile-label" id="cert-mobile-label" aria-live="polite"></p>
 
                 <div class="contact-glass">
                     <h3>Get in Touch</h3>
@@ -334,6 +351,147 @@
                 toggle.setAttribute('aria-label', 'Open menu');
             });
         });
+
+        // Certificate carousel — arrows on mobile only
+        const certFolders = document.querySelectorAll('.cert-folder');
+        const certPrev = document.querySelector('.cert-arrow-prev');
+        const certNext = document.querySelector('.cert-arrow-next');
+        let certIndex = 0;
+        const mobileCert = window.matchMedia('(max-width: 768px)');
+
+        function updateCertCarousel() {
+            if (mobileCert.matches) {
+                certFolders.forEach((folder, i) => {
+                    folder.classList.toggle('is-active', i === certIndex);
+                });
+                certPrev.hidden = certIndex === 0;
+                certNext.hidden = certIndex === certFolders.length - 1;
+                const active = certFolders[certIndex];
+                const mobileLabel = document.getElementById('cert-mobile-label');
+                if (mobileLabel && active) {
+                    mobileLabel.textContent = active.dataset.label || '';
+                }
+            } else {
+                certFolders.forEach(folder => folder.classList.add('is-active'));
+                certPrev.hidden = true;
+                certNext.hidden = true;
+                certIndex = 0;
+                const mobileLabel = document.getElementById('cert-mobile-label');
+                if (mobileLabel) mobileLabel.textContent = '';
+            }
+        }
+
+        certPrev.addEventListener('click', () => {
+            if (certIndex > 0) {
+                certIndex--;
+                updateCertCarousel();
+            }
+        });
+
+        certNext.addEventListener('click', () => {
+            if (certIndex < certFolders.length - 1) {
+                certIndex++;
+                updateCertCarousel();
+            }
+        });
+
+        mobileCert.addEventListener('change', updateCertCarousel);
+        updateCertCarousel();
+
+        // About section — staged reveal: ID → intro → expertise
+        (function initAboutReveal() {
+            const aboutSection = document.getElementById('about');
+            const aboutLayout = document.getElementById('about-layout');
+            if (!aboutSection || !aboutLayout) return;
+
+            const idCard = aboutLayout.querySelector('.ID');
+            const introduction = aboutLayout.querySelector('.introduction');
+            const expertise = aboutLayout.querySelector('.about-expertise');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function finishSequence() {
+                aboutLayout.classList.add('about-sequence-start', 'about-id-done', 'about-intro-done', 'about-expertise-done');
+            }
+
+            function measureOffsets() {
+                if (!introduction || !idCard) return;
+
+                const introRect = introduction.getBoundingClientRect();
+                const idRect = idCard.getBoundingClientRect();
+
+                aboutLayout.style.setProperty('--intro-offset-x', `${idRect.left - introRect.left}px`);
+                aboutLayout.style.setProperty('--intro-offset-y', `${idRect.top - introRect.top}px`);
+            }
+
+            function startSequence() {
+                measureOffsets();
+                aboutLayout.classList.add('about-sequence-start');
+            }
+
+            if (reducedMotion) {
+                finishSequence();
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        startSequence();
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(aboutSection);
+
+            idCard?.addEventListener('animationend', (event) => {
+                if (event.animationName === 'idReveal') {
+                    aboutLayout.classList.add('about-id-done');
+                }
+            });
+
+            introduction?.addEventListener('animationend', (event) => {
+                if (event.animationName === 'introSlideOut') {
+                    aboutLayout.classList.add('about-intro-done');
+                }
+            });
+
+            expertise?.addEventListener('animationend', (event) => {
+                if (event.animationName === 'expertiseSlideDown') {
+                    aboutLayout.classList.add('about-expertise-done');
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (!aboutLayout.classList.contains('about-sequence-start')) return;
+                if (aboutLayout.classList.contains('about-intro-done')) return;
+                measureOffsets();
+            });
+        })();
+
+        document.querySelectorAll('.folder-card[data-target]').forEach(folder => {
+    function activate() {
+      const targetId = folder.dataset.target;
+      const card = document.getElementById(targetId);
+      if (!card) return;
+
+      // Scroll to experiences section smoothly
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Add highlight, then remove after animation
+      card.classList.add('exp-highlighted');
+      setTimeout(() => card.classList.remove('exp-highlighted'), 900);
+    }
+
+    folder.addEventListener('click', activate);
+    // Also support keyboard (Enter / Space)
+    folder.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate();
+      }
+    });
+  });
     </script>
 
 </body>
