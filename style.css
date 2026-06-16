@@ -4,8 +4,7 @@
     --beige-light: #F3EDE3;
     --beige-warm: #E5DCCB;
     --cream: #F0EBE0;
-    --olive: #5A8040;
-    --olive-dark: #354A18;
+    --olive: rgba(106, 142, 35, 0.747);
     --peach: #D4C8A0;
     --maroon: #A02828;
     --orange: #E87A30;
@@ -379,7 +378,7 @@ button:focus-visible {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-    background: linear-gradient(170deg, var(--olive-dark), #5a7c37, #abd76e);
+    background: linear-gradient(170deg, var(--olive),rgba(135, 179, 49, 0.747), #7aa83e);
     border-radius: 14px;
     padding: 18px;
     box-shadow: 0 6px 24px rgba(53, 74, 24, 0.22);
@@ -510,7 +509,8 @@ button:focus-visible {
 }
 
 .cause div{
-    background-color:rgba(255, 0, 0, 0.664);
+    background-color:maroon;
+    color: white;
     padding:10px;
     border-radius: 10px;;
 }
@@ -522,7 +522,7 @@ button:focus-visible {
 }
 
 .improve div{
-    background-color:rgba(28, 117, 1, 0.664);
+    background-color:rgba(106, 142, 35, 0.747);
     padding:10px;
     border-radius: 10px;
 }
