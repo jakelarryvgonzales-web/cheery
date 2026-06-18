@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -44,6 +45,42 @@
 
         <!-- About Me -->
         <section id="about" class="section-about">
+
+            <!-- Blob background layer -->
+            <div class="blobs-bg" aria-hidden="true">
+                <!-- blob1: large dark olive, top-left -->
+                <svg class="blob blob1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#7A9A60" d="M37.4,-42C52.2,-32.1,70.4,-23.9,78.7,-9.1C87,5.7,85.3,27,74.9,41.7C64.5,56.4,45.5,64.4,28.1,65.8C10.8,67.1,-4.8,61.7,-22.5,57.2C-40.1,52.8,-59.7,49.3,-67.1,38C-74.4,26.8,-69.5,7.7,-63.9,-9C-58.3,-25.7,-51.9,-40,-41.2,-50.6C-30.4,-61.2,-15.2,-68.1,-2,-65.8C11.3,-63.4,22.6,-51.9,37.4,-42Z" transform="translate(100 100)" />
+                </svg>
+                <!-- blob2: medium light green, top-right -->
+                <svg class="blob blob2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A4BE8F" d="M12.3,-15.1C23.7,-14.9,45.8,-27,61.5,-26.6C77.3,-26.1,86.6,-13.1,78.3,-4.8C70,3.5,44.1,7,35.3,19.6C26.6,32.1,35.1,53.8,32.1,54.4C29.1,55,14.5,34.5,1.8,31.3C-10.9,28.2,-21.8,42.4,-26.3,42.6C-30.8,42.9,-29,29.3,-27.5,19.9C-26.1,10.5,-24.9,5.2,-34.3,-5.4C-43.6,-16,-63.4,-32,-62.1,-36.5C-60.7,-41.1,-38.2,-34.1,-24.3,-32.8C-10.4,-31.6,-5.2,-36.1,-2.3,-32C0.5,-27.9,1,-15.3,12.3,-15.1Z" transform="translate(100 100)" />
+                </svg>
+                <!-- blob3: mid-size, bottom-left -->
+                <svg class="blob blob3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A4BE8F" d="M66.5,-31C70.4,-9.6,46.9,11.4,22.2,28.9C-2.4,46.5,-28.4,60.6,-41.7,52.1C-55.1,43.7,-55.9,12.6,-46.8,-15.9C-37.8,-44.4,-18.9,-70.3,6.2,-72.3C31.3,-74.3,62.6,-52.4,66.5,-31Z" transform="translate(100 100)" />
+                </svg>
+                <!-- blob4: small, center-right -->
+                <svg class="blob blob4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A4BE8F" d="M25.4,-26.2C32.7,-18.1,38.3,-9,45.2,6.9C52.2,22.9,60.5,45.8,53.2,61.6C45.8,77.4,22.9,86.1,9.2,76.9C-4.5,67.7,-9.1,40.6,-15,24.8C-21,9.1,-28.4,4.5,-28.3,0.1C-28.1,-4.3,-20.5,-8.5,-14.5,-16.7C-8.5,-24.8,-4.3,-36.9,2.4,-39.3C9,-41.7,18.1,-34.4,25.4,-26.2Z" transform="translate(100 100)" />
+                </svg>
+                <!-- blob5: large, bottom-right -->
+                <svg class="blob blob5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A4BE8F" d="M50.3,-60.2C65.8,-47,79.1,-31.7,78.3,-16.7C77.5,-1.8,62.4,12.8,52.1,29.7C41.9,46.6,36.4,65.8,26.1,68C15.8,70.1,0.6,55.1,-13.4,46C-27.3,36.9,-40.1,33.7,-47,25.4C-53.9,17,-54.9,3.6,-54,-10.9C-53.1,-25.4,-50.2,-40.9,-40.9,-55.2C-31.6,-69.4,-15.8,-82.4,0.8,-83.4C17.5,-84.4,34.9,-73.4,50.3,-60.2Z" transform="translate(100 100)" />
+                </svg>
+                <!-- blob6: medium, center-top -->
+                <svg class="blob blob6" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#A4BE8F" d="M38.3,-60C52.7,-50.4,69.4,-44.9,77.8,-33.5C86.1,-22.1,86,-4.9,78.1,7.3C70.2,19.5,54.6,26.6,44.7,39.4C34.7,52.2,30.4,70.7,21.6,73.1C12.7,75.6,-0.8,62.1,-17.1,57.6C-33.4,53.1,-52.5,57.6,-60.6,51C-68.6,44.4,-65.7,26.7,-66.7,10.4C-67.7,-5.8,-72.7,-20.6,-69.3,-33.1C-65.8,-45.5,-54,-55.6,-41.1,-65.9C-28.1,-76.1,-14.1,-86.7,-1,-85C12,-83.4,24,-69.7,38.3,-60Z" transform="translate(100 100)" />
+                </svg>
+
+                <img src="assets/blob7.svg" class="blob7">
+                <img src="assets/blob8.svg" class="blob8">
+                <img src="assets/blob9.svg" class="blob9">
+                <imgs src="assets/blob10.svg" class="blob10">
+
+
+
+            </div>
             <div class="section-inner">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-layout" id="about-layout">
@@ -66,6 +103,7 @@
       <div class="folder-tab"></div>
       <div class="folder-body">
         <h4>Operations</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-cog-icon lucide-user-round-cog"><path d="m14.305 19.53.923-.382"/><path d="m15.228 16.852-.923-.383"/><path d="m16.852 15.228-.383-.923"/><path d="m16.852 20.772-.383.924"/><path d="m19.148 15.228.383-.923"/><path d="m19.53 21.696-.382-.924"/><path d="M2 21a8 8 0 0 1 10.434-7.62"/><path d="m20.772 16.852.924-.383"/><path d="m20.772 19.148.924.383"/><circle cx="10" cy="8" r="5"/><circle cx="18" cy="18" r="3"/></svg>
         <ul>
           <li>Process improvement</li>
           <li>SOP implementation</li>
@@ -79,6 +117,7 @@
       <div class="folder-tab"></div>
       <div class="folder-body">
         <h4>Executive Support</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days-icon lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
         <ul>
           <li>Calendar management</li>
           <li>Meeting coordination</li>
@@ -92,6 +131,7 @@
       <div class="folder-tab"></div>
       <div class="folder-body">
         <h4>Marketing Operations</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone-icon lucide-megaphone"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/></svg>
         <ul>
           <li>CRM campaigns</li>
           <li>Brand governance</li>
@@ -105,6 +145,7 @@
       <div class="folder-tab"></div>
       <div class="folder-body">
         <h4>Employee Support</h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake-icon lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
         <ul>
           <li>Onboarding &amp; Offboarding</li>
           <li>Compliance tracking</li>
@@ -125,6 +166,8 @@
 <section id="experiences" class="section-experiences">
   <div class="section-inner">
     <h2 class="section-title">EXPERIENCES</h2>
+    <hr class="experiences-divider">
+    <div class="main">
     <div class="experience-grid">
 
       <!-- 1: matches Operations folder -->
@@ -203,56 +246,52 @@
       </article>
 
     </div>
+    </div>
   </div>
 </section>
 
         <!-- Why You Need Me -->
         <section id="why" class="section-why">
             <div class="section-inner">
-                <h2 class="section-title">Why You Need Me</h2>
+                <h2 class="section-title">Why You Need Me❓</h2>
 
-                <div class="why-block">
-                    
-                    <H3 class="why-intro">
-                        <span class="bullet-grey" aria-hidden="true">⚠️</span>
-                        <strong>Most operational challenges are not caused by difficult work, they are caused by:</strong>
-                    </H3>
-                   
-                    <div class="cause">
-                      
-                        <div>Poor communication</div>
-                        <div>Manual follow-ups</div>
-                        <div>Lack of visibility</div>
-                        <div>Inconsistent process</div>
-                        
+                <div class="why-columns">
+                    <!-- Left Column: Challenges -->
+                    <div class="outer-why">
+                        <div class="h3-box">
+                            <h3>⚠️ Most operational challenges are not caused by difficult work, they are caused by:</h3>
+                        </div>
+                        <div class="inner-why">
+                            <div class="inner-red"><p>Poor communication</p></div>
+                            <div class="inner-red"><p>Manual follow-ups</p></div>
+                            <div class="inner-red"><p>Lack of visibility</p></div>
+                            <div class="inner-red"><p>Inconsistent process</p></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="why-block">
-                    <H3 class="why-intro">
-                        <span class="bullet-green" aria-hidden="true">✅</span>
-                        <strong>My focus is on building systems that improve:</strong>
-                    </H3>
-                    <div class="improve">
-                        
-                        <div>Accountability</div>
-                        <div>Documentation</div>
-                        <div>Communication</div>
-                        <div>Operational Efficiency</div>
-                       
+                    <!-- Right Column: Focus/Solutions -->
+                    <div class="outer-why">
+                        <div class="h3-box">
+                            <h3>✅ My focus is on building systems that improve:</h3>
+                        </div>
+                        <div class="inner-why">
+                            <div class="inner-green"><p>Accountability</p></div>
+                            <div class="inner-green"><p>Communication</p></div>
+                            <div class="inner-green"><p>Documentation</p></div>
+                            <div class="inner-green"><p>Operational Efficiency</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Verified Expertise & Contact -->
         <section id="contact" class="section-hire">
             <div class="section-inner">
                 <h2 class="section-title">Verified Expertise. Let's Connect.</h2>
 
-                <div class="mac-scene">
-                    <img src="assets/mac pc.jfif" class="mac-bg" alt="Desktop monitor displaying certificates" loading="lazy">
-
+                <div class="experience-workspace">
                     <div class="mac-overlay">
                         <div class="mac-titlebar" aria-hidden="true">
                             <div class="redCircle"></div>
@@ -260,40 +299,44 @@
                             <div class="greenCircle"></div>
                         </div>
 
-                        <div class="cert-carousel">
-                            <button type="button" class="cert-arrow cert-arrow-prev" aria-label="Previous certificate" hidden>&#8249;</button>
-
-                            <div class="cert-row">
-                                <div class="cert-folder is-active" data-label="Foundations of Digital Marketing and E-commerce">
-                                    <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="cert-folder-link">
-                                        <img src="assets/macbook folder.jfif" alt="Digital Marketing certificate folder" loading="lazy">
-                                        <span class="folder-clickme">CLICK ME!</span>
+                        <div class="mac-content">
+                            <div class="folder-group">
+                                <span class="folder-group-label">Certificates</span>
+                                <div class="folder-group-items">
+                                    <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="folder-item folder-item--cert">
+                                        <img src="assets/macbook folder.jfif" alt="Digital Marketing certificate folder" class="folder-icon" loading="lazy">
+                                        <span class="folder-name">Foundations of Digital Marketing and E-commerce</span>
                                     </a>
-                                    <p class="cert-label">Foundations of Digital Marketing and E-commerce</p>
-                                </div>
 
-                                <div class="cert-folder" data-label="Foundations of Project Management">
-                                    <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="cert-folder-link">
-                                        <img src="assets/macbook folder.jfif" alt="Project Management certificate folder" loading="lazy">
-                                        <span class="folder-clickme">CLICK ME!</span>
+                                    <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="folder-item folder-item--cert">
+                                        <img src="assets/macbook folder.jfif" alt="Project Management certificate folder" class="folder-icon" loading="lazy">
+                                        <span class="folder-name">Foundations of Project Management</span>
                                     </a>
-                                    <p class="cert-label">Foundations of Project Management</p>
                                 </div>
                             </div>
 
-                            <button type="button" class="cert-arrow cert-arrow-next" aria-label="Next certificate" hidden>&#8250;</button>
+                            <div class="folder-divider" aria-hidden="true"></div>
+
+                            <div class="folder-group">
+                                <span class="folder-group-label">Connect</span>
+                                <div class="folder-group-items">
+                                    <a href="mailto:your.email@example.com" class="folder-item folder-item--contact">
+                                        <img src="assets/macbook folder.jfif" alt="Email folder" class="folder-icon" loading="lazy">
+                                        <span class="folder-name">Email Me</span>
+                                    </a>
+
+                                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="folder-item folder-item--contact">
+                                        <img src="assets/macbook folder.jfif" alt="LinkedIn folder" class="folder-icon" loading="lazy">
+                                        <span class="folder-name">LinkedIn</span>
+                                    </a>
+
+                                    <a href="#hobbies" class="folder-item folder-item--contact">
+                                        <img src="assets/macbook folder.jfif" alt="Hobbies and Photography folder" class="folder-icon" loading="lazy">
+                                        <span class="folder-name">Hobbies &amp; Photography</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <p class="cert-mobile-label" id="cert-mobile-label" aria-live="polite"></p>
-
-                <div class="contact-glass">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-links">
-                        <a href="mailto:your.email@example.com" class="glass-link">Email Me</a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="glass-link">LinkedIn</a>
-                        <a href="#hobbies" class="glass-link">Hobbies &amp; Photography</a>
                     </div>
                 </div>
             </div>
@@ -351,52 +394,6 @@
                 toggle.setAttribute('aria-label', 'Open menu');
             });
         });
-
-        // Certificate carousel — arrows on mobile only
-        const certFolders = document.querySelectorAll('.cert-folder');
-        const certPrev = document.querySelector('.cert-arrow-prev');
-        const certNext = document.querySelector('.cert-arrow-next');
-        let certIndex = 0;
-        const mobileCert = window.matchMedia('(max-width: 768px)');
-
-        function updateCertCarousel() {
-            if (mobileCert.matches) {
-                certFolders.forEach((folder, i) => {
-                    folder.classList.toggle('is-active', i === certIndex);
-                });
-                certPrev.hidden = certIndex === 0;
-                certNext.hidden = certIndex === certFolders.length - 1;
-                const active = certFolders[certIndex];
-                const mobileLabel = document.getElementById('cert-mobile-label');
-                if (mobileLabel && active) {
-                    mobileLabel.textContent = active.dataset.label || '';
-                }
-            } else {
-                certFolders.forEach(folder => folder.classList.add('is-active'));
-                certPrev.hidden = true;
-                certNext.hidden = true;
-                certIndex = 0;
-                const mobileLabel = document.getElementById('cert-mobile-label');
-                if (mobileLabel) mobileLabel.textContent = '';
-            }
-        }
-
-        certPrev.addEventListener('click', () => {
-            if (certIndex > 0) {
-                certIndex--;
-                updateCertCarousel();
-            }
-        });
-
-        certNext.addEventListener('click', () => {
-            if (certIndex < certFolders.length - 1) {
-                certIndex++;
-                updateCertCarousel();
-            }
-        });
-
-        mobileCert.addEventListener('change', updateCertCarousel);
-        updateCertCarousel();
 
         // About section — staged reveal: ID → intro → expertise
         (function initAboutReveal() {
@@ -492,6 +489,8 @@
       }
     });
   });
+
+  lucide.createIcons();
     </script>
 
 </body>
