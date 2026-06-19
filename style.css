@@ -4,7 +4,7 @@
     --beige-light: #F3EDE3;
     --beige-warm: #E5DCCB;
     --cream: #F0EBE0;
-    --olive: rgba(106, 142, 35, 0.747);
+    --olive: rgb(80, 112, 20);
     --peach: #D4C8A0;
     --maroon: #A02828;
     --orange: #E87A30;
@@ -19,7 +19,7 @@
     --max-width: 1100px;
     --radius: 12px;
     --transition: 0.2s ease;
-    --test: rgba(208, 221, 131, 0.425);
+
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,6 +41,10 @@ body {
 body section {
     border-bottom: 0.6px solid rgb(0, 0, 0);
     
+}
+
+.section-about {
+    border-bottom: none;
 }
 
 
@@ -377,6 +381,51 @@ button:focus-visible {
     animation: blobDrift10 13s ease-in-out infinite;
 }
 
+/* ── EXPERIENCE SECTION BLOBS (lava lamp, peach/olive palette) ── */
+.exp-blobs-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: clip;
+}
+
+.exp-blob1 {
+    width: clamp(320px, 44vw, 540px);
+    top: -8%;
+    left: -10%;
+    opacity: 0.6;
+    filter: blur(20px);
+    animation: blobDrift1 19s ease-in-out infinite;
+}
+
+.exp-blob2 {
+    width: clamp(260px, 34vw, 460px);
+    top: 10%;
+    right: -8%;
+    opacity: 0.55;
+    filter: blur(16px);
+    animation: blobDrift5 15s ease-in-out infinite;
+}
+
+.exp-blob3 {
+    width: clamp(220px, 28vw, 400px);
+    bottom: -6%;
+    left: 10%;
+    opacity: 0.5;
+    filter: blur(18px);
+    animation: blobDrift3 21s ease-in-out infinite;
+}
+
+.exp-blob4 {
+    width: clamp(180px, 22vw, 320px);
+    bottom: 5%;
+    right: 12%;
+    opacity: 0.45;
+    filter: blur(14px);
+    animation: blobDrift7 16s ease-in-out infinite;
+}
+
 /* ── Blob keyframe animations ── */
 @keyframes blobDrift1 {
     0%   { transform: translate(0px,   0px)   scale(1);    }
@@ -517,17 +566,13 @@ button:focus-visible {
 }
 
 .about-expertise {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     opacity: 0;
     pointer-events: none;
     will-change: transform, opacity;
 }
 
 .about-layout.about-intro-done .about-expertise {
-    position: relative;
     animation: expertiseSlideDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     pointer-events: auto;
 }
@@ -585,15 +630,8 @@ button:focus-visible {
     box-shadow: 0 2px 6px rgba(85, 107, 47, 0.04);
 }
 
-.exp-card {
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-}
 
-.exp-card.exp-highlighted {
-    transform: scale(1.03);
-    box-shadow: 0 12px 36px rgba(122, 32, 32, 0.18);
-    z-index: 2;
-}
+
 
 .box-folder {
     display: grid;
@@ -670,8 +708,14 @@ button:focus-visible {
     justify-content: center;
     padding: var(--section-pad) 0;
     position: relative;
+    overflow: clip;
+    background-image: url(assets/noise.png);
+    background-color: var(--beige)
+}
 
-    background-color: rgba(190, 220, 130, 0.25);
+.section-experiences .section-inner {
+    position: relative;
+    z-index: 2;
 }
 
 .section-experiences .section-title {
@@ -697,21 +741,78 @@ button:focus-visible {
     gap: clamp(16px, 3vw, 24px);
 }
 
+.experience-grid .exp-card:nth-child(1).exp-in-view { animation-delay: 0s; }
+.experience-grid .exp-card:nth-child(2).exp-in-view { animation-delay: 0.12s; }
+.experience-grid .exp-card:nth-child(3).exp-in-view { animation-delay: 0.24s; }
+.experience-grid .exp-card:nth-child(4).exp-in-view { animation-delay: 0.36s; }
+
 .exp-card {
     display: flex;
     flex-direction: column;
     height: 100%;
     border-radius: var(--radius);
     overflow: hidden;
-    border: 2px ;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: transform var(--transition), box-shadow var(--transition);
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 
+                0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: transform var(--transition), 
+                box-shadow var(--transition),
+                background-color var(--transition), 
+                border-color var(--transition);
+    opacity: 0;
+    transform: translateX(-60px);
+    filter: blur(8px);
+    will-change: transform, opacity, filter;
+    position: relative;
+    z-index: 1;
 }
 
+
 .exp-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background-color: #f4f8ff;
+    border-color: var(--cause-red);
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
 }
+
+.exp-card:hover .exp-card.exp-hovered {
+    background-color: #f4f8ff;
+    border-color: var(--cause-red);
+    z-index:3;
+    transform: translateY(-6px);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 1), 
+                0 4px 12px rgba(0, 0, 0, 1);
+}
+
+.exp-card.exp-highlighted {
+    background-color: #e8f0fe;
+    border-color: var(--cause-red);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    z-index: 4;
+}
+
+
+.exp-card.exp-in-view {
+    animation: expCardFlyIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes expCardFlyIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+
+
+
 
 .exp-card-header {
     background-color: var(--peach);
@@ -731,7 +832,7 @@ button:focus-visible {
     flex: 1;
     background-color: var(--olive);
     padding: 18px 20px;
-    color: #1a1a1a;
+    color: var(--cream);
 }
 
 .exp-card-body p {
@@ -746,7 +847,7 @@ button:focus-visible {
     letter-spacing: 0.6px;
     margin-top: 12px;
     margin-bottom: 4px;
-    color: #111;
+    color: #ffffff;
 }
 
 .exp-card-body .label:first-child { margin-top: 0; }
@@ -1107,17 +1208,6 @@ button:focus-visible {
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes idReveal {
-    from {
-        opacity: 0;
-        transform: scale(0.92) translateY(14px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
 }
 
 @keyframes introSlideOut {
