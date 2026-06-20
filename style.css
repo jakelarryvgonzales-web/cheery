@@ -862,6 +862,11 @@ button:focus-visible {
 /* ── WHY YOU NEED ME ── */
 .section-why {
     padding: var(--section-pad) 0;
+    margin: 50px;
+    background-image: url(assets/noise.png);
+    border: 1px solid black;
+    border-radius: 12px;
+    
 }
 
 .why-columns {
@@ -978,7 +983,8 @@ button:focus-visible {
 /* ── VERIFIED EXPERTISE ── */
 .section-hire {
     padding: var(--section-pad) 0;
-        background-color: var(--cream);
+    background-image: url(assets/noise.png);
+    border-top: 1px solid black;
 
 }
 
@@ -1153,7 +1159,7 @@ button:focus-visible {
 }
 
 .hobbies-intro {
-    color: var(--text-muted);
+    color: var(--maroon);
     max-width: 50ch;
     line-height: 1.65;
     font-size: 0.95rem;
@@ -1204,6 +1210,167 @@ button:focus-visible {
     background: #f0f0f0;
 }
 
+/* ── Header reveal animation ── */
+.anim-header {
+    opacity: 0;
+    transform: translateY(28px);
+    will-change: transform, opacity;
+}
+
+.anim-header.anim-header-in {
+    animation: headerRise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger groups of headers (e.g. folder/exp-card titles) by index */
+.anim-header[data-stagger="1"] { animation-delay: 0.08s; }
+.anim-header[data-stagger="2"] { animation-delay: 0.16s; }
+.anim-header[data-stagger="3"] { animation-delay: 0.24s; }
+.anim-header[data-stagger="4"] { animation-delay: 0.32s; }
+
+/* Hero headers reveal immediately on load rather than on scroll */
+.home-labels h3.anim-header,
+.home-labels h1.anim-header {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: headerRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.home-labels h3.anim-header { animation-delay: 0.1s; }
+.home-labels h1.anim-header { animation-delay: 0.22s; }
+
+@keyframes headerRise {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* No-JS fallback: if JS never adds anim-header-in, headers should still be visible */
+.no-js .anim-header {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Folder links reveal (Verified Expertise) ── */
+.folder-item.anim-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+}
+
+.folder-item.anim-reveal.anim-reveal-in {
+    animation: folderRise 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger each folder within its group by index */
+.folder-item.anim-reveal[data-stagger="1"] { animation-delay: 0.08s; }
+.folder-item.anim-reveal[data-stagger="2"] { animation-delay: 0.16s; }
+.folder-item.anim-reveal[data-stagger="3"] { animation-delay: 0.24s; }
+.folder-item.anim-reveal[data-stagger="4"] { animation-delay: 0.32s; }
+
+@keyframes folderRise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.no-js .folder-item.anim-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Gallery photos reveal (Hobbies) ── */
+.gallery-item.anim-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: transform, opacity;
+}
+
+.gallery-item.anim-reveal.anim-reveal-in {
+    animation: galleryRise 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.gallery-item.anim-reveal[data-stagger="1"] { animation-delay: 0.06s; }
+.gallery-item.anim-reveal[data-stagger="2"] { animation-delay: 0.12s; }
+.gallery-item.anim-reveal[data-stagger="3"] { animation-delay: 0.18s; }
+.gallery-item.anim-reveal[data-stagger="4"] { animation-delay: 0.24s; }
+.gallery-item.anim-reveal[data-stagger="5"] { animation-delay: 0.30s; }
+.gallery-item.anim-reveal[data-stagger="6"] { animation-delay: 0.36s; }
+
+@keyframes galleryRise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.no-js .gallery-item.anim-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Hobbies intro sentence — left to right, opacity 0 to 1 ── */
+.hobbies-intro.anim-ltr {
+    opacity: 0;
+    transform: translateX(-40px);
+    will-change: transform, opacity;
+}
+
+.hobbies-intro.anim-ltr.anim-ltr-in {
+    animation: introLeftToRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes introLeftToRight {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.no-js .hobbies-intro.anim-ltr {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Why columns reveal (Why You Need Me) ── */
+.outer-why.anim-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    will-change: transform, opacity;
+}
+
+.outer-why.anim-reveal.anim-reveal-in {
+    animation: whyColumnRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.outer-why.anim-reveal[data-stagger="1"] { animation-delay: 0s; }
+.outer-why.anim-reveal[data-stagger="2"] { animation-delay: 0.15s; }
+
+@keyframes whyColumnRise {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.no-js .outer-why.anim-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Nav links drop in from above on load ── */
+.navbar a.anim-drop {
+    opacity: 0;
+    transform: translateY(-16px);
+    will-change: transform, opacity;
+    animation: navDropIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.navbar a.anim-drop:nth-child(1) { animation-delay: 0.05s; }
+.navbar a.anim-drop:nth-child(2) { animation-delay: 0.12s; }
+.navbar a.anim-drop:nth-child(3) { animation-delay: 0.19s; }
+.navbar a.anim-drop:nth-child(4) { animation-delay: 0.26s; }
+
+@keyframes navDropIn {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.no-js .navbar a.anim-drop {
+    opacity: 1;
+    transform: none;
+}
+
 /* ── Animation ── */
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -1237,6 +1404,21 @@ button:focus-visible {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
+    }
+    .anim-header {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .folder-item.anim-reveal,
+    .gallery-item.anim-reveal,
+    .hobbies-intro.anim-ltr {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .outer-why.anim-reveal,
+    .navbar a.anim-drop {
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .about-layout:not(.about-intro-done) .introduction,

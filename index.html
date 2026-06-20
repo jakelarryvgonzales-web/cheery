@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.remove('no-js');</script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -24,17 +25,17 @@
                     <span></span>
                 </button>
                 <nav class="navbar" id="site-nav">
-                    <a href="#home">HOME</a>
-                    <a href="#about">ABOUT</a>
-                    <a href="#experiences">SERVICES</a>
-                    <a href="#contact" class="nav-hire">HIRE ME</a>
+                    <a href="#home" class="anim-drop">HOME</a>
+                    <a href="#about" class="anim-drop">ABOUT</a>
+                    <a href="#experiences" class="anim-drop">SERVICES</a>
+                    <a href="#contact" class="nav-hire anim-drop">HIRE ME</a>
                 </nav>
             </header>
 
             <div class="home-content">
                 <div class="home-labels">
-                    <h3>ADMIN &amp; OPERATIONS EXECUTIVE</h3>
-                    <h1>Turning operational chaos into seamless execution.</h1>
+                    <h3 class="anim-header">ADMIN &amp; OPERATIONS EXECUTIVE</h3>
+                    <h1 class="anim-header">Turning operational chaos into seamless execution.</h1>
                 </div>
                 <div class="home-buttons">
                     <a href="#experiences" class="btn btn-primary">View My Work</a>
@@ -82,7 +83,7 @@
 
             </div>
             <div class="section-inner">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title anim-header">About Me</h2>
                 <div class="about-layout" id="about-layout">
                     <div class="img-box">
                         <img src="assets/ID_CARD.jfif" class="ID" alt="Cheery Cajegas ID badge" width="280" height="auto">
@@ -96,13 +97,13 @@
                         </div>
 
                         <div class="about-expertise">
-  <h3 class="areaOfExpertise">AREA OF EXPERTISE:</h3>
+  <h3 class="areaOfExpertise anim-header">AREA OF EXPERTISE:</h3>
   <div class="box-folder">
 
     <div class="folder-card" data-target="exp-operations" role="button" tabindex="0">
       <div class="folder-tab"></div>
       <div class="folder-body">
-        <h4>Operations</h4>
+        <h4 class="anim-header" data-stagger="1">Operations</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-cog-icon lucide-user-round-cog"><path d="m14.305 19.53.923-.382"/><path d="m15.228 16.852-.923-.383"/><path d="m16.852 15.228-.383-.923"/><path d="m16.852 20.772-.383.924"/><path d="m19.148 15.228.383-.923"/><path d="m19.53 21.696-.382-.924"/><path d="M2 21a8 8 0 0 1 10.434-7.62"/><path d="m20.772 16.852.924-.383"/><path d="m20.772 19.148.924.383"/><circle cx="10" cy="8" r="5"/><circle cx="18" cy="18" r="3"/></svg>
         <ul>
           <li>Process improvement</li>
@@ -116,7 +117,7 @@
     <div class="folder-card" data-target="exp-executive" role="button" tabindex="0">
       <div class="folder-tab"></div>
       <div class="folder-body">
-        <h4>Executive Support</h4>
+        <h4 class="anim-header" data-stagger="2">Executive Support</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days-icon lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
         <ul>
           <li>Calendar management</li>
@@ -130,7 +131,7 @@
     <div class="folder-card" data-target="exp-marketing" role="button" tabindex="0">
       <div class="folder-tab"></div>
       <div class="folder-body">
-        <h4>Marketing Operations</h4>
+        <h4 class="anim-header" data-stagger="3">Marketing Operations</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone-icon lucide-megaphone"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/></svg>
         <ul>
           <li>CRM campaigns</li>
@@ -144,7 +145,7 @@
     <div class="folder-card" data-target="exp-employee" role="button" tabindex="0">
       <div class="folder-tab"></div>
       <div class="folder-body">
-        <h4>Employee Support</h4>
+        <h4 class="anim-header" data-stagger="4">Employee Support</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake-icon lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
         <ul>
           <li>Onboarding &amp; Offboarding</li>
@@ -179,14 +180,14 @@
     </svg>
   </div>
   <div class="section-inner">
-    <h2 class="section-title">EXPERIENCES</h2>
+    <h2 class="section-title anim-header">EXPERIENCES</h2>
     <hr class="experiences-divider">
     <div class="main">
     <div class="experience-grid">
 
       <!-- 1: matches Operations folder -->
       <article class="exp-card" id="exp-operations">
-        <div class="exp-card-header"><h3>OPERATIONS &amp; BUSINESS SUPPORT</h3></div>
+        <div class="exp-card-header"><h3 class="anim-header" data-stagger="1">OPERATIONS &amp; BUSINESS SUPPORT</h3></div>
         <div class="exp-card-body">
           <p class="label">CHALLENGE</p>
           <p>Supporting daily operations across multiple branches while maintaining administrative controls.</p>
@@ -204,7 +205,7 @@
 
       <!-- 2: matches Executive Support folder -->
       <article class="exp-card" id="exp-executive">
-        <div class="exp-card-header"><h3>EXECUTIVE SUPPORT &amp; PEOPLE OPERATIONS</h3></div>
+        <div class="exp-card-header"><h3 class="anim-header" data-stagger="2">EXECUTIVE SUPPORT &amp; PEOPLE OPERATIONS</h3></div>
         <div class="exp-card-body">
           <p class="label">CHALLENGE</p>
           <p>Ensuring effective communication between leadership and employees.</p>
@@ -223,7 +224,7 @@
 
       <!-- 3: matches Marketing Operations folder -->
       <article class="exp-card" id="exp-marketing">
-        <div class="exp-card-header"><h3>MARKETING OPERATIONS &amp; DIGITAL PRESENCE</h3></div>
+        <div class="exp-card-header"><h3 class="anim-header" data-stagger="3">MARKETING OPERATIONS &amp; DIGITAL PRESENCE</h3></div>
         <div class="exp-card-body">
           <p class="label">CHALLENGE</p>
           <p>Maintaining consistent brand communications across multiple channels and locations and coordinating with third party team.</p>
@@ -242,7 +243,7 @@
 
       <!-- 4: matches Employee Support folder -->
       <article class="exp-card" id="exp-employee">
-        <div class="exp-card-header"><h3>SALES &amp; CUSTOMER EXPERIENCE</h3></div>
+        <div class="exp-card-header"><h3 class="anim-header" data-stagger="4">SALES &amp; CUSTOMER EXPERIENCE</h3></div>
         <div class="exp-card-body">
           <p class="label">CHALLENGE</p>
           <p>Supporting customer acquisition and retention activities.</p>
@@ -267,13 +268,13 @@
         <!-- Why You Need Me -->
         <section id="why" class="section-why">
             <div class="section-inner">
-                <h2 class="section-title">Why You Need Me❓</h2>
+                <h2 class="section-title anim-header">Why You Need Me❓</h2>
 
                 <div class="why-columns">
                     <!-- Left Column: Challenges -->
-                    <div class="outer-why">
+                    <div class="outer-why anim-reveal" data-stagger="1">
                         <div class="h3-box">
-                            <h3>⚠️ Most operational challenges are not caused by difficult work, they are caused by:</h3>
+                            <h3 class="anim-header" data-stagger="1">⚠️ Most operational challenges are not caused by difficult work, they are caused by:</h3>
                         </div>
                         <div class="inner-why">
                             <div class="inner-red"><p>Poor communication</p></div>
@@ -284,9 +285,9 @@
                     </div>
 
                     <!-- Right Column: Focus/Solutions -->
-                    <div class="outer-why">
+                    <div class="outer-why anim-reveal" data-stagger="2">
                         <div class="h3-box">
-                            <h3>✅ My focus is on building systems that improve:</h3>
+                            <h3 class="anim-header" data-stagger="2">✅ My focus is on building systems that improve:</h3>
                         </div>
                         <div class="inner-why">
                             <div class="inner-green"><p>Accountability</p></div>
@@ -303,7 +304,7 @@
         <!-- Verified Expertise & Contact -->
         <section id="contact" class="section-hire">
             <div class="section-inner">
-                <h2 class="section-title">Verified Expertise. Let's Connect.</h2>
+                <h2 class="section-title anim-header">Verified Expertise. Let's Connect.</h2>
 
                 <div class="experience-workspace">
                     <div class="mac-overlay">
@@ -317,12 +318,12 @@
                             <div class="folder-group">
                                 <span class="folder-group-label">Certificates</span>
                                 <div class="folder-group-items">
-                                    <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="folder-item folder-item--cert">
+                                    <a href="https://coursera.org/share/705585265bf74590596899997a4adf02" target="_blank" rel="noopener" class="folder-item folder-item--cert anim-reveal" data-stagger="1">
                                         <img src="assets/macbook folder.jfif" alt="Digital Marketing certificate folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">Foundations of Digital Marketing and E-commerce</span>
                                     </a>
 
-                                    <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="folder-item folder-item--cert">
+                                    <a href="https://coursera.org/share/19bfdeaa6c2046a9c4b875e6da855a10" target="_blank" rel="noopener" class="folder-item folder-item--cert anim-reveal" data-stagger="2">
                                         <img src="assets/macbook folder.jfif" alt="Project Management certificate folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">Foundations of Project Management</span>
                                     </a>
@@ -334,17 +335,17 @@
                             <div class="folder-group">
                                 <span class="folder-group-label">Connect</span>
                                 <div class="folder-group-items">
-                                    <a href="mailto:your.email@example.com" class="folder-item folder-item--contact">
+                                    <a href="mailto:your.email@example.com" class="folder-item folder-item--contact anim-reveal" data-stagger="1">
                                         <img src="assets/macbook folder.jfif" alt="Email folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">Email Me</span>
                                     </a>
 
-                                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="folder-item folder-item--contact">
+                                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="folder-item folder-item--contact anim-reveal" data-stagger="2">
                                         <img src="assets/macbook folder.jfif" alt="LinkedIn folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">LinkedIn</span>
                                     </a>
 
-                                    <a href="#hobbies" class="folder-item folder-item--contact">
+                                    <a href="#hobbies" class="folder-item folder-item--contact anim-reveal" data-stagger="3">
                                         <img src="assets/macbook folder.jfif" alt="Hobbies and Photography folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">Hobbies &amp; Photography</span>
                                     </a>
@@ -359,26 +360,26 @@
         <!-- Hobbies & Photography -->
         <section id="hobbies" class="section-hobbies">
             <div class="section-inner">
-                <h2 class="section-title">Hobbies &amp; Interests</h2>
-                <p class="hobbies-intro">A glimpse into the things I love outside of work — photography, travel, and everyday moments worth capturing.</p>
+                <h2 class="section-title anim-header">Hobbies &amp; Interests</h2>
+                <p class="hobbies-intro anim-ltr">A glimpse into the things I love outside of work — photography, travel, and everyday moments worth capturing.</p>
 
                 <div class="photo-gallery">
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="1">
                         <div class="gallery-placeholder">Add photo 1</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="2">
                         <div class="gallery-placeholder">Add photo 2</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="3">
                         <div class="gallery-placeholder">Add photo 3</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="4">
                         <div class="gallery-placeholder">Add photo 4</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="5">
                         <div class="gallery-placeholder">Add photo 5</div>
                     </div>
-                    <div class="gallery-item">
+                    <div class="gallery-item anim-reveal" data-stagger="6">
                         <div class="gallery-placeholder">Add photo 6</div>
                     </div>
                 </div>
@@ -498,6 +499,86 @@
             }, { threshold: 0.2 });
 
             cards.forEach(card => observer.observe(card));
+        })();
+
+        // Headers — rise + fade in as they scroll into view (hero headers reveal on load)
+        (function initHeaderReveal() {
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const headers = document.querySelectorAll('h1.anim-header, h2.anim-header, h3.anim-header, h4.anim-header, h5.anim-header, h6.anim-header');
+            if (!headers.length) return;
+
+            if (reducedMotion) {
+                headers.forEach(h => h.classList.add('anim-header-in'));
+                return;
+            }
+
+            const scrollHeaders = [];
+
+            headers.forEach((header) => {
+                if (header.closest('.home-labels')) {
+                    // Hero headers reveal immediately via CSS animation, just mark them done
+                    header.classList.add('anim-header-in');
+                } else {
+                    scrollHeaders.push(header);
+                }
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('anim-header-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3, rootMargin: '0px 0px -10% 0px' });
+
+            scrollHeaders.forEach(header => observer.observe(header));
+        })();
+
+        // Verified Expertise folder links + Hobbies gallery photos + Why columns — rise + fade in on scroll
+        (function initRevealOnScroll() {
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const items = document.querySelectorAll('.folder-item.anim-reveal, .gallery-item.anim-reveal, .outer-why.anim-reveal');
+            if (!items.length) return;
+
+            if (reducedMotion) {
+                items.forEach(item => item.classList.add('anim-reveal-in'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('anim-reveal-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+            items.forEach(item => observer.observe(item));
+        })();
+
+        // Hobbies intro sentence — left to right, opacity 0 to 1, on scroll
+        (function initIntroLeftToRight() {
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const intro = document.querySelector('.hobbies-intro.anim-ltr');
+            if (!intro) return;
+
+            if (reducedMotion) {
+                intro.classList.add('anim-ltr-in');
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('anim-ltr-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            observer.observe(intro);
         })();
 
         document.querySelectorAll('.folder-card[data-target]').forEach(folder => {
