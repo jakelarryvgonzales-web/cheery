@@ -77,7 +77,7 @@
                 <img src="assets/blob7.svg" class="blob7">
                 <img src="assets/blob8.svg" class="blob8">
                 <img src="assets/blob9.svg" class="blob9">
-                <imgs src="assets/blob10.svg" class="blob10">
+                <img src="assets/blob10.svg" class="blob10">
 
 
 
@@ -335,12 +335,12 @@
                             <div class="folder-group">
                                 <span class="folder-group-label">Connect</span>
                                 <div class="folder-group-items">
-                                    <a href="mailto:your.email@example.com" class="folder-item folder-item--contact anim-reveal" data-stagger="1">
+                                    <a href="mailto:cheerycajegas@gmail.com" class="folder-item folder-item--contact anim-reveal" data-stagger="1">
                                         <img src="assets/macbook folder.jfif" alt="Email folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">Email Me</span>
                                     </a>
 
-                                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="folder-item folder-item--contact anim-reveal" data-stagger="2">
+                                    <a href="https://www.linkedin.com/in/cheerymc?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="folder-item folder-item--contact anim-reveal" data-stagger="2">
                                         <img src="assets/macbook folder.jfif" alt="LinkedIn folder" class="folder-icon" loading="lazy">
                                         <span class="folder-name">LinkedIn</span>
                                     </a>
@@ -364,23 +364,25 @@
                 <p class="hobbies-intro anim-ltr">A glimpse into the things I love outside of work — photography, travel, and everyday moments worth capturing.</p>
 
                 <div class="photo-gallery">
-                    <div class="gallery-item anim-reveal" data-stagger="1">
-                        <div class="gallery-placeholder">Add photo 1</div>
+                    <div class="gallery-video-pane anim-reveal" data-stagger="1">
+                        <div class="gallery-placeholder gallery-video"><video class="gallery-video-el" controls autoplay loop muted playsinline preload="metadata"><source src="assets/pic1.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
                     </div>
-                    <div class="gallery-item anim-reveal" data-stagger="2">
-                        <div class="gallery-placeholder">Add photo 2</div>
-                    </div>
-                    <div class="gallery-item anim-reveal" data-stagger="3">
-                        <div class="gallery-placeholder">Add photo 3</div>
-                    </div>
-                    <div class="gallery-item anim-reveal" data-stagger="4">
-                        <div class="gallery-placeholder">Add photo 4</div>
-                    </div>
-                    <div class="gallery-item anim-reveal" data-stagger="5">
-                        <div class="gallery-placeholder">Add photo 5</div>
-                    </div>
-                    <div class="gallery-item anim-reveal" data-stagger="6">
-                        <div class="gallery-placeholder">Add photo 6</div>
+                    <div class="gallery-photo-grid">
+                        <div class="gallery-item anim-reveal" data-stagger="2">
+                            <div class="gallery-placeholder"><img src="assets/pic2.jpeg" alt="Photography hobby photo" loading="lazy"></div>
+                        </div>
+                        <div class="gallery-item anim-reveal" data-stagger="3">
+                            <div class="gallery-placeholder"><img src="assets/pic3.jpeg" alt="Photography hobby photo" loading="lazy"></div>
+                        </div>
+                        <div class="gallery-item anim-reveal" data-stagger="4">
+                            <div class="gallery-placeholder"><img src="assets/pic4.jpeg" alt="Photography hobby photo" loading="lazy"></div>
+                        </div>
+                        <div class="gallery-item anim-reveal" data-stagger="5">
+                            <div class="gallery-placeholder"><img src="assets/pic5.jpeg" alt="Photography hobby photo" loading="lazy"></div>
+                        </div>
+                        <div class="gallery-item anim-reveal" data-stagger="6">
+                            <div class="gallery-placeholder"><img src="assets/pic6.jpeg" alt="Photography hobby photo" loading="lazy"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -538,7 +540,7 @@
         // Verified Expertise folder links + Hobbies gallery photos + Why columns — rise + fade in on scroll
         (function initRevealOnScroll() {
             const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const items = document.querySelectorAll('.folder-item.anim-reveal, .gallery-item.anim-reveal, .outer-why.anim-reveal');
+            const items = document.querySelectorAll('.folder-item.anim-reveal, .gallery-item.anim-reveal, .gallery-video-pane.anim-reveal, .outer-why.anim-reveal');
             if (!items.length) return;
 
             if (reducedMotion) {

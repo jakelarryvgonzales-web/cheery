@@ -1168,6 +1168,13 @@ button:focus-visible {
 
 .photo-gallery {
     display: grid;
+    grid-template-columns: minmax(220px, 360px) 1fr;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.gallery-photo-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
     gap: 14px;
 }
@@ -1189,6 +1196,20 @@ button:focus-visible {
     object-fit: cover;
 }
 
+/* Video pane: stands alone on the left, full height of the photo
+   grid beside it. object-fit: contain on the video itself guarantees
+   it's never cropped or stretched regardless of the pane's shape. */
+.gallery-video-pane {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    transition: transform var(--transition);
+    min-height: 280px;
+}
+
+.gallery-video-pane:hover { transform: scale(1.02); }
+
 .gallery-placeholder {
     width: 100%;
     height: 100%;
@@ -1199,6 +1220,14 @@ button:focus-visible {
     font-size: 0.85rem;
     font-weight: 500;
     background: linear-gradient(135deg, #e8e4dc, #d4cfc5);
+}
+
+.gallery-video-el {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #000;
 }
 
 /* ── FOOTER ── */
@@ -1276,29 +1305,38 @@ button:focus-visible {
 }
 
 /* ── Gallery photos reveal (Hobbies) ── */
-.gallery-item.anim-reveal {
+.gallery-item.anim-reveal,
+.gallery-video-pane.anim-reveal {
     opacity: 0;
     transform: translateY(24px);
     will-change: transform, opacity;
 }
 
-.gallery-item.anim-reveal.anim-reveal-in {
+.gallery-item.anim-reveal.anim-reveal-in,
+.gallery-video-pane.anim-reveal.anim-reveal-in {
     animation: galleryRise 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.gallery-item.anim-reveal[data-stagger="1"] { animation-delay: 0.06s; }
-.gallery-item.anim-reveal[data-stagger="2"] { animation-delay: 0.12s; }
-.gallery-item.anim-reveal[data-stagger="3"] { animation-delay: 0.18s; }
-.gallery-item.anim-reveal[data-stagger="4"] { animation-delay: 0.24s; }
-.gallery-item.anim-reveal[data-stagger="5"] { animation-delay: 0.30s; }
-.gallery-item.anim-reveal[data-stagger="6"] { animation-delay: 0.36s; }
+.gallery-item.anim-reveal[data-stagger="1"],
+.gallery-video-pane.anim-reveal[data-stagger="1"] { animation-delay: 0.06s; }
+.gallery-item.anim-reveal[data-stagger="2"],
+.gallery-video-pane.anim-reveal[data-stagger="2"] { animation-delay: 0.12s; }
+.gallery-item.anim-reveal[data-stagger="3"],
+.gallery-video-pane.anim-reveal[data-stagger="3"] { animation-delay: 0.18s; }
+.gallery-item.anim-reveal[data-stagger="4"],
+.gallery-video-pane.anim-reveal[data-stagger="4"] { animation-delay: 0.24s; }
+.gallery-item.anim-reveal[data-stagger="5"],
+.gallery-video-pane.anim-reveal[data-stagger="5"] { animation-delay: 0.30s; }
+.gallery-item.anim-reveal[data-stagger="6"],
+.gallery-video-pane.anim-reveal[data-stagger="6"] { animation-delay: 0.36s; }
 
 @keyframes galleryRise {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-.no-js .gallery-item.anim-reveal {
+.no-js .gallery-item.anim-reveal,
+.no-js .gallery-video-pane.anim-reveal {
     opacity: 1;
     transform: none;
 }
@@ -1548,13 +1586,25 @@ button:focus-visible {
     }
 
     .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-video-pane {
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+    }
+
+    .gallery-photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* ── SMALL PHONES ── */
 @media (max-width: 400px) {
-    .photo-gallery { grid-template-columns: 1fr; }
+    .gallery-photo-grid { grid-template-columns: 1fr; }
 
     .navbar a { font-size: 0.85rem; }
 
