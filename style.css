@@ -110,7 +110,7 @@ button:focus-visible {
     color: #fff;
 }
 
-.btn-primary:hover { background-color: #222; }
+.btn-primary:hover { background-color: #704a4acc; }
 
 .btn-secondary {
     background-color: rgba(255, 255, 255, 0.55);
@@ -118,7 +118,10 @@ button:focus-visible {
     backdrop-filter: blur(4px);
 }
 
-.btn-secondary:hover { background-color: rgba(255, 255, 255, 0.85); }
+.btn-secondary:hover { 
+    background-color: rgba(255, 255, 255, 0.85); 
+    color:var(--maroon);
+}
 
 /* ── HEADER / NAVBAR ── */
 .site-header {
@@ -895,7 +898,7 @@ button:focus-visible {
     margin-bottom: 20px;
     padding-bottom: 12px;
     border-bottom: 1px solid #695c5c48;
-    min-height: 55px;
+    min-height: 80px;
     display: flex;
     align-items: center;
 }
