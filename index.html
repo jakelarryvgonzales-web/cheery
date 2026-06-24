@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>document.documentElement.classList.remove('no-js');</script>
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -86,7 +85,7 @@
                 <h2 class="section-title anim-header">About Me</h2>
                 <div class="about-layout" id="about-layout">
                     <div class="img-box">
-                        <img src="assets/ID_CARD.jfif" class="ID" alt="Cheery Cajegas ID badge" width="280" height="auto">
+                        <img src="assets/ID_CARD.jfif" class="ID" alt="Cheery Cajegas ID badge" width="280">
                     </div>
                     <div class="about-content">
                         <div class="introduction">
@@ -398,19 +397,21 @@
         const toggle = document.querySelector('.nav-toggle');
         const nav = document.querySelector('.navbar');
 
-        toggle.addEventListener('click', () => {
-            const open = nav.classList.toggle('is-open');
-            toggle.setAttribute('aria-expanded', open);
-            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        });
-
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('is-open');
-                toggle.setAttribute('aria-expanded', 'false');
-                toggle.setAttribute('aria-label', 'Open menu');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', open);
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
             });
-        });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.setAttribute('aria-label', 'Open menu');
+                });
+            });
+        }
 
         // About section — staged reveal: ID → intro → expertise
         (function initAboutReveal() {
@@ -622,12 +623,6 @@
         if (card) card.classList.remove('exp-hovered');
     });
 });
-
-  
-
-  
-
-  lucide.createIcons();
     </script>
 
 </body>

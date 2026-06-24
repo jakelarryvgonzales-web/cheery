@@ -218,8 +218,7 @@ button:focus-visible {
     position: absolute;
     inset: 0;
     background-image: url("assets/office1.jpg");
-    background-size: 180px 180px;
-    background-size:cover;
+    background-size: cover;
     pointer-events: none;
     opacity: 0.4;
 }
