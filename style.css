@@ -376,14 +376,7 @@ button:focus-visible {
 }
 
 /* blob10 — small floater, upper center-right */
-.blob10 {
-    width: clamp(110px, 12vw, 180px);
-    top: 15%;
-    right: 28%;
-    opacity: 0.45;
-    filter: blur(10px);
-    animation: blobDrift10 13s ease-in-out infinite;
-}
+
 
 /* ── EXPERIENCE SECTION BLOBS (lava lamp, peach/olive palette) ── */
 .exp-blobs-bg {
